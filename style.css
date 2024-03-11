@@ -1,0 +1,405 @@
+html,body {
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #fff;
+    background: #F5F5F5;
+}
+
+input {
+    all: unset;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+    letter-spacing: 0.5px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: #F5F5F5;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100w;
+    height: 700px;
+    background: url(images/1666337894_2-mykaleidoscope-ru-p-koltso-zolotoe-s-chernim-brilliantom-zhens-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header>.container {
+    width: 90%;
+}
+
+.header_menu {
+    width: 100%;
+    padding: 10px 0px;
+    background: #000;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_bar {
+    display: flex;
+    gap: 35px;
+    font-size: 17px;
+}
+
+.search_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.search_block>img {
+    padding-bottom: 5px;
+}
+
+.search {
+    all: unset;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 400;
+    display: flex;
+    color: #ffff;
+}
+
+.header_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    width: 300px;
+}
+
+.title {
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.text {
+    font-weight: 300;
+}
+
+.main {
+    margin-bottom: 100px;
+}
+
+.search_block2 {
+    border-bottom: 1px solid #000;
+    height: 30px;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop_content {
+    display: flex;
+    gap: 50px;
+    align-items: start;
+}
+
+.filter_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter_name,
+.filter_brand {
+    color: #555;
+    width: 200px;
+}
+
+.filter_price {
+    color: #555;
+    width: 200px;
+}
+
+.filter_inpt {
+    width: 170px;
+    height: 30px;
+    border: 1px solid #777;
+    background: #ffff;
+    color: #000;
+    padding-left: 5px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.filter_inpt:focus {
+    box-shadow: 3px 4px 0px #000, -3px -4px 0px #000,
+        inset -2px -2px 3px #c7c7c7,
+        inset 2px 2px 3px #c7c7c7;
+}
+
+.price_items {
+    background: #ffff;
+    color: #555;
+    width: 170px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.price_item {
+    display: flex;
+    justify-content: start;
+    margin: 5px 0px 0px -25px;
+    gap: 7px;
+}
+
+.price_item>input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.price_item>input:checked {
+    background: #ffcd29;
+}
+
+.filter_prodList {
+    all: unset;
+    padding: 15px 25px;
+    background: #ffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #777;
+    color: #1f1f1f;
+    transition: 0.3s ease-out;
+}
+
+.filter_prodList:hover {
+    box-shadow: 4px 4px 0px #000, -4px -4px 0px #000;
+}
+
+.shop_products {
+    display: flex;
+    flex-direction: column;
+}
+
+#loading {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #a1a1a1;
+    border-top: 6px solid #1f1f1f;
+    border-radius: 100%;
+    margin: auto;
+    margin-left: 400px;
+    display: none;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products>h2 {
+    text-align: center;
+    color: #1f1f1f;
+}
+
+.product {
+    width: 230px;
+    height: 270px;
+    border: 1px solid #777;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.product:hover .hover {
+    opacity: 1;
+}
+
+.img {
+    width: 100%;
+    height: 220px;
+    background: url(images/1666337894_2-mykaleidoscope-ru-p-koltso-zolotoe-s-chernim-brilliantom-zhens-2.jpg);
+    background-size: cover;
+    background-position: 55%;
+    background-size: 250%;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ccccccd8;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    width: 40px;
+
+}
+
+.like:hover .c {
+    fill: #ffd900b0;
+    stroke: #ffd900b0;
+}
+
+.like:hover {
+    background: #555;
+}
+
+.c {
+    fill: none;
+    stroke: #555;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1px;
+    transition: 0.3s ease-out;
+}
+
+.brand_info {
+    width: 95.5%;
+    background: #cecece;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    color: #000;
+}
+
+.name {
+    padding-left: 5px;
+    font-style: 19px;
+    font-size: 14px;
+}
+
+.brand {
+    padding-left: 10px;
+    font-size: 21px;
+}
+
+.price {
+    font-weight: 700;
+    margin-left: 120px;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.pages_item {
+    border: 1px solid #acacac;
+    color: #000 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+
+}
+
+.pages_item>a {
+    color: #000;
+    text-decoration: none;
+}
+
+.pages_item:hover {
+    background: #000;
+}
+
+.pages_item:hover a {
+    color: #fff;
+}
+
+.active {
+    background: #000;
+}
+
+.active>a {
+    color: #fff;
+}
+
+.footer {
+    width: 99vw;
+    height: 400px;
+    background: #000;
+}
+

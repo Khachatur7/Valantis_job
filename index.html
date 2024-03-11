@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/ring-svgrepo-com.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Doritis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header_menu">
+          <div class="container">
+            <div class="nav">
+              <div class="logo">DORITIS</div>
+              <ul class="nav_bar">
+                <li class="nav_bar_item"><a href="#">Главная</a></li>
+                <li class="nav_bar_item"><a href="#">Магазин</a></li>
+                <li class="nav_bar_item"><a href="#">Избранные</a></li>
+              </ul>
+              <div class="search_block">
+                <input type="text" class="search" /><img
+                  src="./images/search.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_content">
+          <div class="container">
+            <div class="header_text">
+              <span class="title">DORITIS</span>
+              <p class="text">
+                Лучшие цены и лучшее качество на настоящее золото.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="shop">
+          <div class="container">
+            <div class="head">
+              <h2 style="color: #000">Наши товары</h2>
+              <div class="search_block2">
+                <input type="text" class="search" /><img
+                  src="./images/search2.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="filter_menu" id="filter_menu">
+                <div class="filter_name">
+                  <h3>Название</h3>
+                  <input type="text" class="filter_inpt prod_name" id="name" />
+                </div>
+                <div class="filter_brand">
+                  <h3>Бренд</h3>
+                  <input type="text" class="filter_inpt prod_name" id="brand"/>
+                </div>
+
+                <div class="filter_price">
+                  <h3>Цена</h3>
+                  <ul class="price_items">
+                    <div class="price_item">
+                      <input type="checkbox" name="" id="one"  value="0 - 10000">
+                      <label for="one">0 - 10 000</label>
+                    </div>
+                    <div class="price_item">
+                      <input type="checkbox" name="" id="two" value="10000 - 30000" />
+                      <label for="two">10 000 - 30 000</label>
+                    </div>
+                    <div class="price_item">
+                      <input type="checkbox" name="" id="three" value="30000 - 100000" />
+                      <label for="three">30 000 - 100 000</label>
+                    </div>
+                    <div class="price_item">
+                      <input type="checkbox" name="" id="four" value="100000"/>
+                      <label for="four">100 000 +</label>
+                    </div>
+                  </ul>
+                </div>
+                <button class="filter_prodList" id="filter_prodList">Искать</button>
+              </div>
+              <div class="shop_products">
+                <div id="loading"></div>
+                <div class="products" id="products"></div>
+                <ul class="pages" id="pages"></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  <script src="script.js"></script>
+</html>
