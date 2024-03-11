@@ -177,7 +177,7 @@ a {
 .price_items {
     background: #ffff;
     color: #555;
-    width: 170px;
+    width: 200px;
     height: 200px;
     display: flex;
     flex-direction: column;
